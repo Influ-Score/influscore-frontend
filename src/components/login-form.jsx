@@ -3,6 +3,7 @@ import { Input } from "./ui/input"
 import { useState } from "react"
 import { Navigate } from "react-router-dom"
 
+
 export function LoginForm() {
   const [role, setRole] = useState("creator")
 
@@ -95,9 +96,9 @@ export function LoginForm() {
   if (redirectData) {
     return (
       <Navigate
-        to="/LandingPage.jsx"   
-        state={redirectData}
-      />
+  to="/landingpage"
+  state={redirectData}
+/>
     )
   }
 

@@ -4,7 +4,6 @@ export default function Login() {
   return (
     <div className="grid min-h-screen lg:grid-cols-2 bg-black text-white">
       
-      {/* LEFT SIDE */}
       <div className="hidden lg:flex flex-col justify-between p-10 ">
         
         <div>
@@ -18,7 +17,7 @@ export default function Login() {
 
         <div className="flex items-center justify-center">
           <div className="w-64 h-64 rounded-xl bg-white/10 backdrop-blur-lg flex items-center justify-center">
-            <span className="text-pink-400 text-xl">✨</span>
+            <span className="text-primary text-xl">IMAGES WILL COME HERE</span>
           </div>
         </div>
 
@@ -27,7 +26,6 @@ export default function Login() {
         </p>
       </div>
 
-      {/* RIGHT SIDE */}
       <div className="flex items-center justify-center p-6">
         <div className="w-full max-w-md">
           <LoginForm />
