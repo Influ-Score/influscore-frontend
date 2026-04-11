@@ -1,10 +1,13 @@
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { useState } from "react"
-import { Navigate } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 export function LoginForm() {
+  const navigate = useNavigate()
+
   const [role, setRole] = useState("creator")
 
   const [formData, setFormData] = useState({
@@ -184,11 +187,14 @@ export function LoginForm() {
         Sign In
       </Button>
 
-      <p className="text-center text-sm text-gray-400">
+        <p className="text-center text-sm text-gray-400">
         Don’t have an account?{" "}
-        <span className="text-primary cursor-pointer">
-          Sign up
-        </span>
+        <span
+  onClick={() => navigate("/signup")}
+  className="text-primary cursor-pointer"
+>
+  Sign up
+</span>
       </p>
 
     </form>
