@@ -95,20 +95,17 @@ export function SignupForm() {
 
       <h1 className="text-2xl font-bold text-center">Create Account</h1>
 
-      {/* Email */}
       <div>
         <label>Email</label>
         <Input name="email" onChange={handleChange} />
         {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
       </div>
 
-      {/* Password */}
       <div>
         <label>Password</label>
         <Input type="password" name="password" onChange={handleChange} />
       </div>
 
-      {/* Confirm Password */}
       <div>
         <label>Confirm Password</label>
         <Input type="password" name="confirmPassword" onChange={handleChange} />
@@ -117,7 +114,6 @@ export function SignupForm() {
         )}
       </div>
 
-      {/* Role Dropdown */}
       <div>
         <label>What are you here for?</label>
         <select
@@ -133,9 +129,7 @@ export function SignupForm() {
         {errors.role && <p className="text-red-500 text-xs">{errors.role}</p>}
       </div>
 
-      {/* Google */}
        
-      {/* Submit */}
       <Button type="submit">Sign Up</Button>
 
           <div className="flex items-center gap-2 text-gray-500 text-xs">
