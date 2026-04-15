@@ -3,10 +3,10 @@ import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import LandingPage from "./pages/LandingPage"
 import Dashboard from "./pages/Dashboard"
-import Platforms from "./pages/Platforms"
 import Inbox from "./pages/Inbox"
 import Settings from "./pages/Settings"
 import Layout from "./layouts/layout"
+import Platforms from "./pages/Platforms"
 
 function App() {
   return (

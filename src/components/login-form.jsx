@@ -99,7 +99,7 @@ export function LoginForm() {
   if (redirectData) {
     return (
       <Navigate
-  to="/landingpage"
+  to="/platforms  "
   state={redirectData}
 />
     )
