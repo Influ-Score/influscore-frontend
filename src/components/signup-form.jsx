@@ -1,10 +1,11 @@
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { useState } from "react"
-import { Navigate } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 
 export function SignupForm() {
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -96,6 +97,10 @@ export function SignupForm() {
       <h1 className="text-2xl font-bold text-center">Create Account</h1>
 
       <div>
+        <label>Name</label>
+        <Input name="name" onChange={handleChange} />
+      </div>
+      <div>
         <label>Email</label>
         <Input name="email" onChange={handleChange} />
         {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
@@ -129,23 +134,31 @@ export function SignupForm() {
         {errors.role && <p className="text-red-500 text-xs">{errors.role}</p>}
       </div>
 
-       
+
       <Button type="submit">Sign Up</Button>
 
-          <div className="flex items-center gap-2 text-gray-500 text-xs">
+      <div className="flex items-center gap-2 text-gray-500 text-xs">
         <div className="flex-1 h-px bg-gray-700" />
         OR
         <div className="flex-1 h-px bg-gray-700" />
       </div>
 
-        <Button
+      <Button
         type="button"
         variant="outline"
         className="w-full flex items-center gap-2">
         <img src="/google.svg" alt="Google" className="w-4 h-4" />
         Continue with Google
       </Button>
-
+      <p className="text-center text-sm text-gray-400">
+        Already have an account?{" "}
+        <span
+          onClick={() => navigate("/")}
+          className="text-primary cursor-pointer"
+        >
+          Login
+        </span>
+      </p>
 
     </form>
   )

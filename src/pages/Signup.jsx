@@ -13,12 +13,12 @@ export default function Signup() {
             Start Your Creator Journey
           </p>
         </div>
-
+{/* 
         <div className="flex items-center justify-center">
           <div className="w-64 h-64 rounded-xl bg-white/10 backdrop-blur-lg flex items-center justify-center">
             <span className="text-primary text-xl">IMAGES</span>
           </div>
-        </div>
+        </div> */}
 
         <p className="text-xs text-gray-400">
           © 2024 InfluScore Technology

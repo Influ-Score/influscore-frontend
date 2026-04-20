@@ -99,9 +99,9 @@ export function LoginForm() {
   if (redirectData) {
     return (
       <Navigate
-  to="/platforms  "
-  state={redirectData}
-/>
+        to="/platforms  "
+        state={redirectData}
+      />
     )
   }
 
@@ -119,11 +119,10 @@ export function LoginForm() {
         <button
           type="button"
           onClick={() => handleRoleChange("creator")}
-          className={`flex-1 py-2 rounded-full text-sm ${
-            role === "creator"
+          className={`flex-1 py-2 rounded-full text-sm ${role === "creator"
               ? "bg-primary text-primary-foreground"
               : "text-muted-foreground"
-          }`}
+            }`}
         >
           Creator
         </button>
@@ -131,11 +130,10 @@ export function LoginForm() {
         <button
           type="button"
           onClick={() => handleRoleChange("brand")}
-          className={`flex-1 py-2 rounded-full text-sm ${
-            role === "brand"
+          className={`flex-1 py-2 rounded-full text-sm ${role === "brand"
               ? "bg-primary text-primary-foreground"
               : "text-muted-foreground"
-          }`}
+            }`}
         >
           Brand
         </button>
@@ -167,6 +165,13 @@ export function LoginForm() {
         )}
       </div>
 
+
+
+
+      <Button type="submit" className="w-full">
+        Sign In
+      </Button>
+
       <div className="flex items-center gap-2 text-gray-500 text-xs">
         <div className="flex-1 h-px bg-gray-700" />
         OR
@@ -183,18 +188,14 @@ export function LoginForm() {
         Continue with Google
       </Button>
 
-      <Button type="submit" className="w-full">
-        Sign In
-      </Button>
-
-        <p className="text-center text-sm text-gray-400">
+      <p className="text-center text-sm text-gray-400">
         Don’t have an account?{" "}
         <span
-  onClick={() => navigate("/signup")}
-  className="text-primary cursor-pointer"
->
-  Sign up
-</span>
+          onClick={() => navigate("/signup")}
+          className="text-primary cursor-pointer"
+        >
+          Sign up
+        </span>
       </p>
 
     </form>
