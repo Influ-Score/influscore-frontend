@@ -122,8 +122,8 @@ export function SignupForm() {
           className="w-full p-2 rounded bg-black border"
         >
           <option value="">Select Role</option>
-          <option value="creator">Creator</option>
-          <option value="brand">Brand</option>
+          <option value="CREATOR">Creator</option>
+          <option value="BRAND">Brand</option>
         </select>
 
         {errors.role && <p className="text-red-500 text-xs">{errors.role}</p>}
