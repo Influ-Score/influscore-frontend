@@ -96,9 +96,11 @@ export function LoginForm() {
       }
       else {
         const userData = await res.json()
+
+        console.log("Google Auth User Data:", userData.data.token);
   
-        localStorage.setItem("token", userData.token)
-        localStorage.setItem("user", JSON.stringify(userData))
+        localStorage.setItem("token", userData.data.token)
+        localStorage.setItem("user", JSON.stringify(userData.data))
     
         setRedirectData(userData)
       }

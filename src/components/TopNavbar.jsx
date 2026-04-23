@@ -1,6 +1,19 @@
 import { Bell } from "lucide-react"
 import SearchBar from "./search-bar"
+import { useState, useEffect } from "react"
+
 export default function TopNavbar() {
+
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user")
+
+    if (storedUser) {
+      setUser(JSON.parse(storedUser))
+    }
+  }, [])
+
   return (
 	<div className="h-14 border-b border-border bg-background flex items-center px-6">
 
@@ -15,13 +28,13 @@ export default function TopNavbar() {
 
         <div className="flex items-center gap-3 px-2 py-1 rounded-lg hover:bg-muted transition cursor-pointer">
           <img
-            src="https://i.pravatar.cc/40"
-            alt="profile"
+            src={user?.pictureUrl}
+            alt=""
             className="h-9 w-9 rounded-full border border-border"
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-sm font-medium">Nitika</span>
-            <span className="text-xs text-muted-foreground">Creator</span>
+            <span className="text-sm font-medium">{user?.name || "User"}</span>
+            <span className="text-xs text-muted-foreground">{user?.role || "Creator"}</span>
           </div>
         </div>
 
